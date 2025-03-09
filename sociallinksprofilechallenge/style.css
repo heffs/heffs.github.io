@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --grey900: hsl(0, 0%, 8%);
+    --grey800: hsl(0, 0%, 12%);
+    --grey700: hsl(0, 0%, 20%);
+    --fgmain: hsl(0, 0%, 100%);
+    --fgcomp: hsl(75, 94%, 57%);
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: Inter, sans-serif;
+    background-color: var(--grey900);
+    color: var(--fgmain);
+}
+
+.card {
+    /* padding-top: 38px; */
+    /* padding-bottom: 38px; */
+    padding-top: clamp(14px, calc(16px + 0.3 * (100vh - 560px)), 38px);
+    padding-bottom: clamp(14px, calc(16px + 0.3 * (100vh - 560px)), 38px);
+    padding-left: clamp(16px, calc(16px + 0.3 * (100vw - 320px)), 40px);
+    padding-right: clamp(16px, calc(16px + 0.3 * (100vw - 320px)), 40px);
+    /* width: 375px; */
+    width: clamp(300px, calc(300px + 0.9375 * (100vw - 320px)), 375px);
+    background-color: var(--grey800);
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card__avatar {
+    border-radius: 50%;
+    width: 92px;
+    height: 92px;
+}
+
+.card__name {
+    padding-top: 30px;
+    font-size: 24px;
+}
+
+.card__location {
+    padding-top: 12px;
+    font-size: 14px;
+    color: var(--fgcomp);
+}
+
+.card__blurb {
+    padding-top: 30px;
+    font-size: 14px;
+}
+
+.card ul {
+    padding-top: 24px;
+    list-style-type: none;
+    width: 100%;
+}
+
+.card li {
+    width: 100%;
+    height: 42px;
+    margin: 12px 0;
+}
+
+.card li button {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: var(--grey700);
+    color: var(--fgmain);
+    border: none;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.card li button:hover {
+    background-color: var(--fgcomp);
+    color: var(--grey900);
+    cursor: pointer;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+}
